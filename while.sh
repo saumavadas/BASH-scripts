@@ -1,10 +1,12 @@
 #!/bin/bash
-read -p "Enter counter" counter
-
+read -p "Enter counter: " counter
 counter=${counter:-5}
 
-while [ $counter -le 5 ]
+#echo $counter
+c=1
+while [ $c -le $counter ]
 do
-    echo "Counter: $counter"
-    counter=$((counter + 1))  # Increment the counter
+    echo "Counter: $c"
+    c=$((c + 1))  # Increment the counter
 done
+echo "Loop is complete!"
